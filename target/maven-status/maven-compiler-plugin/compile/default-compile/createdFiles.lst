@@ -1,0 +1,11 @@
+io\lightfeather\notifier\configs\WebConfig.class
+io\lightfeather\notifier\ServletInitializer.class
+io\lightfeather\notifier\NotifierApplication.class
+io\lightfeather\notifier\services\ManagerService.class
+io\lightfeather\notifier\configs\RestTemplateConfig$1.class
+io\lightfeather\notifier\controllers\UserController.class
+io\lightfeather\notifier\configs\RestTemplateConfig.class
+io\lightfeather\notifier\services\impl\ManagerServiceImpl.class
+io\lightfeather\notifier\models\ManagerDTO.class
+io\lightfeather\notifier\models\UserDTO.class
+io\lightfeather\notifier\configs\SecurityConfig.class
