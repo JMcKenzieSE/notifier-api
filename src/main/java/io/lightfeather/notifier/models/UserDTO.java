@@ -13,7 +13,7 @@ public class UserDTO {
     private String phoneNumber;
 
     @NotNull
-    private String supervisor;
+    private ManagerDTO supervisor;
 
     public String getFirstName() {
         return firstName;
@@ -47,11 +47,11 @@ public class UserDTO {
         this.phoneNumber = phoneNumber;
     }
 
-    public String getSupervisor() {
+    public ManagerDTO getSupervisor() {
         return supervisor;
     }
 
-    public void setSupervisor(String supervisor) {
+    public void setSupervisor(ManagerDTO supervisor) {
         this.supervisor = supervisor;
     }
 
@@ -62,7 +62,7 @@ public class UserDTO {
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
-                ", supervisor='" + supervisor + '\'' +
+                ", supervisor=" + supervisor +
                 '}';
     }
 }

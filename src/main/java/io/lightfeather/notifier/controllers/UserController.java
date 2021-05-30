@@ -1,5 +1,6 @@
 package io.lightfeather.notifier.controllers;
 
+import io.lightfeather.notifier.models.ManagerDTO;
 import io.lightfeather.notifier.models.UserDTO;
 import io.lightfeather.notifier.services.ManagerService;
 import org.slf4j.Logger;
@@ -20,15 +21,15 @@ public class UserController {
     private ManagerService managerService;
 
     @GetMapping(value = "/supervisors")
-    public List<String> getSupervisors() {
-        List<String> managers = managerService.getManagers();
-        return managers;
+    public List<ManagerDTO> getSupervisors() {
+        return managerService.getManagers();
     }
 
     @PostMapping(value = "/submit")
-    public void submit(@Valid @RequestBody UserDTO userDto) {
+    public UserDTO submit(@Valid @RequestBody UserDTO userDto) {
         LOGGER.info("*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
         LOGGER.info(userDto.toString());
         LOGGER.info("*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
+        return userDto;
     }
 }

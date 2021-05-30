@@ -7,12 +7,13 @@ public class ManagerDTO {
     private String identificationNumber;
     private String firstName;
     private String lastName;
+    private String supervisorDetails;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -56,15 +57,24 @@ public class ManagerDTO {
         this.lastName = lastName;
     }
 
+    public String getSupervisorDetails() {
+        return supervisorDetails;
+    }
+
+    public void setSupervisorDetails(String supervisorDetails) {
+        this.supervisorDetails = supervisorDetails;
+    }
+
     @Override
     public String toString() {
         return "ManagerDTO{" +
                 "id=" + id +
                 ", phone='" + phone + '\'' +
-                ", jurisdiction=" + jurisdiction +
+                ", jurisdiction='" + jurisdiction + '\'' +
                 ", identificationNumber='" + identificationNumber + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
+                ", supervisorDetails='" + supervisorDetails + '\'' +
                 '}';
     }
 }
